@@ -1,0 +1,12 @@
+version: 3.0
+services:
+  frontend:
+    image: "node:14"
+    env:
+      - NODE_ENV=production
+    build:
+      env:
+        - NODE_ENV=development
+    command: "npm start"
+  database:
+    image: "railway/mongodb"
